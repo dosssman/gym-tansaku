@@ -1,5 +1,5 @@
 # States Map
-![States_Map_Pic]("states_map.jpg")
+![States_Map_Pic]("https://github.com/dosssman/gym-tansaku/blob/master/states_map.jpg?raw=true")
 # Dependencies
 ```
 numpy
