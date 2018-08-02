@@ -120,10 +120,16 @@ if __name__ == "__main__":
             q_error = q_target - q_values[current_state][action_index]
 
             #Update Q Values
+            q_value_before = q_values[ current_state][action_index]
             q_values[ current_state][action_index] += lr * q_error
+            q_value_after = q_values[ current_state][action_index]
 
-            print( "\t From: %s, Action: %d, Cost: %d, To: %s"
-                % ( states_map[current_state][2], action, action_cost, states_map[next_state][2]))
+            # DEBUG: Trace transistions
+            print( "\t From: %s, Action: %d, Cost: %d, To: %s; \t Q(%s,%d):前=%0.2f -> 後%0.2f"
+                % ( states_map[current_state][2], action, action_cost, states_map[next_state][2],
+                states_map[current_state][2], action, q_value_before, q_value_after
+            ))
+
             #States updates
             current_state = next_state
             total_cost += action_cost
@@ -133,3 +139,4 @@ if __name__ == "__main__":
 
         print( "End Episode %d , Total cost: %d\n" % ( ep, total_cost))
         # display_q_values( q_values)
+    display_q_values( q_values)
