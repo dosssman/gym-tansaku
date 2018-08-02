@@ -17,5 +17,5 @@ To dipslay the Q-Values, uncomment line 135 (?)
 # TD(0)
 Coming soon
 
-###PS
+### PS
 ![Dunno](https://github.com/dosssman/gym-tansaku/blob/master/meme.jpg?raw=true)
