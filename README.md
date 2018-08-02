@@ -1,6 +1,6 @@
-#Q-Learning
+# Q-Learning
 
 python q-learning.py
 
-#TD(0)
+# TD(0)
 Coming soon
