@@ -2,7 +2,7 @@ import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
 
-class TansakuEnv( gym.Env):
+class TansakuVOnlyEnv( gym.Env):
     # Not used
     metadata = { "render.modes": [ "graphic", "console"]}
 
@@ -63,6 +63,7 @@ class TansakuEnv( gym.Env):
         if a == 6:
             #Move to the next　地点
             next_chiten += 1
+            if next_chiten > 4 and next_height != 0: next_chiten = 4
             next_state_lis = self.chitens[ next_chiten] + \
                 str( self.heights[ self.current_height])
 
@@ -80,8 +81,9 @@ class TansakuEnv( gym.Env):
         reward = 0
         if a < 6 :
             reward = - self.cost_map[ self.current_height][ a]
-        else:
-            reward = - self.cost_map[ self,current_height][ self.current_height]
+        if ( self.current_state_lis() in [ "B0", "C0", "D0"]
+            and a == 6):
+            reward = -9999
 
         #Update current envs
         self.current_chiten = next_chiten
