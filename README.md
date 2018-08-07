@@ -1,6 +1,7 @@
-# States Map
+# 状態遷移の図表
 ![States_Map_Pic](https://github.com/dosssman/tansaku_report/blob/master/img/states_map.png?raw=true)
-# Dependencies
+
+# Pythonの依存性
 ```
 numpy
 ```
@@ -16,7 +17,7 @@ python td0greedy.py
 # display_state_value( state_value)
 ```
 
-# Q-Learning
+# Q学習
 ```
 python qlearning.py
 ```
