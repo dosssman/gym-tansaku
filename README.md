@@ -1,21 +1,29 @@
 # States Map
-![States_Map_Pic](https://github.com/dosssman/gym-tansaku/blob/master/states_map.jpg?raw=true)
+![States_Map_Pic](https://github.com/dosssman/tansaku_report/blob/master/img/states_map.png?raw=true)
 # Dependencies
 ```
 numpy
+
+# TD(0)
 ```
+python td0greedy.py
+```
+毎エピソードの状態遷移と更新された状態価値を表示する
+
+毎エピソード状態価値を表示する為に、ファイルの行142をuncommentが重要
+```
+# display_state_value( state_value)
+```
+
 # Q-Learning
 ```
-python q-learning.py
+python qlearning.py
 ```
-Displays transition and cost for each step in evry episode
+毎エピソードの状態遷移と更新されたQ価値を表示する
 
-To dipslay the Q-Values, uncomment line 135 (?)
+毎エピソードQ価値を表示する為に、ファイルの行141をuncommentが重要
 ```
 #display_q_values( q_values)
 ```
-# TD(0)
-Coming soon
-
-### PS
-![Dunno](https://github.com/dosssman/gym-tansaku/blob/master/meme.jpg?raw=true)
+### 実践について観測
+![Dunno](https://github.com/dosssman/tansaku_report/blob/master/img/meme.jpg?raw=true)
