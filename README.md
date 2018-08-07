@@ -7,6 +7,7 @@ numpy
 ```
 
 # TD(0)
+端末上で、以下のコマンドを実行する
 ```
 python td0greedy.py
 ```
@@ -18,6 +19,7 @@ python td0greedy.py
 ```
 
 # Q学習
+端末上で、以下のコマンドを実行する
 ```
 python qlearning.py
 ```
